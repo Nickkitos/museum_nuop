@@ -1,0 +1,55 @@
+.delete-icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(255, 255, 255, 0.7);
+    color: red;
+    display: none;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.img-container:hover .delete-icon {
+    display: block;
+}
+
+.form-group img {
+    display: block; 
+    width: 300px;
+}
+
+.form-group video {
+    display: block;
+    width: 300px;
+}
+
+.butons_img {
+    display: block;
+    padding-top: 10px;
+}
+
+.butons_img .popup_selector {
+    margin-right: 20px;
+}
+
+.add-more {
+    margin-top: 30px;
+}
+
+.block {
+    border: 1px solid #D9D9D9; /* Шістнадцятковий код іржавого кольору */
+    padding: 20px; /* Додайте відступи, якщо потрібно */
+    margin-bottom: 20px;
+}
+
+.card-primary{
+    padding: 10px;
+}
+
+
+.model {
+    display: block;
+    width: 300px;
+}

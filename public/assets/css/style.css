@@ -1,0 +1,880 @@
+@font-face {
+    font-family: 'Beware';
+    src: url('/assets/fonts/BEWARE.ttf_') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+body{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    background-color: #FFF;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.container{
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.container h1{
+    margin: 0;
+    color: #FFF;
+    font-family: Montserrat;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+/* home.php */
+.home_view {
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+    background-color: #B7B5B2;
+    background: url(/assets/img/back.png) top center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.burger_menu {
+    position: relative;
+}
+.menu_items {
+    display: none;
+    position: fixed; /* Змініть на 'fixed', щоб меню залишалось видимим при прокрутці */
+    top: 0;
+    left: 0;
+    width: 100%; /* Займати весь екран по ширині */
+    height: 100%; /* Займати весь екран по висоті */
+    background-color: #1E1C1EE5;
+    padding: 10px;
+    z-index: 1000; /* Забезпечте вищий z-index, щоб меню перекривало інші елементи */
+    margin: 0;
+}
+.menu_items li {
+    margin-left: 5%;
+    margin-right: 5%;
+    list-style: none;
+    margin-bottom: 10px;
+    font-family: Montserrat;
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 25px;
+}
+.menu_items li a {
+    position: relative;
+    text-decoration: none;
+    color: #FFF;
+    transition: color 0.3s; /* Зберігаємо тільки плавний перехід для кольору */
+}
+.menu_items li a:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px; /* Товщина підкреслення */
+    width: 100%;
+    background-color: transparent;
+    transform: scaleX(0); /* Початкова ширина підкреслення 0 */
+    transform-origin: bottom right; /* Початкова точка зміни ширини - правий нижній кут */
+    transition: transform 0.3s ease; /* Плавний перехід для зміни ширини */
+}
+.menu_items li a:hover:after {
+    transform: scaleX(1); /* Збільшуємо ширину підкреслення до 1 при наведенні */
+    background-color: #D3D3D3; /* Змінюємо колір підкреслення при наведенні */
+}
+.menu_items li:first-child {
+    width: 40px;
+    height: 40px;
+    margin-left: 90%;
+    margin-right: 0;
+    cursor: pointer;
+    margin-bottom: 0;
+}
+.burger_icon {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+.search {
+    display: flex;
+    width: 264px;
+    height: 45px;
+    flex-shrink: 0;
+    border-radius: 15px;
+    border: 2px solid #F9F7F1;
+    overflow: hidden; /* Забезпечте, що обрізка буде працювати правильно */
+}
+.search img {
+    padding-left: 15px;
+    padding-top: 5px;
+    cursor: pointer;
+    width: 35px;
+    height: 35px;
+}
+.search input {
+    flex: 1;
+    border: none;
+    outline: none;
+    padding-top: 2px;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: 14px;
+    background: transparent; /* Зробити поле введення прозорим */
+    color: #FFF;
+}
+.search input::placeholder {
+    color: #FFF;
+    font-family: Montserrat;
+    font-size: 16px;
+}
+.links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.links a {
+    padding-right: 45px;
+    text-decoration: none;
+    color: #FFF;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+.links a:last-child {
+    padding-right: 0px;
+}
+.links .map {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.links .map img{
+    padding-right: 5px;
+}
+.links .map a{
+    padding-right: 45px;
+}
+#home_container{
+    padding-top: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+#home_container h1{
+    color: #FFF;
+    font-family: Raleway;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+#home_container .description{
+    color: #FFF;
+    font-family: Raleway;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    margin: 0;
+    padding-top: 15px;
+}
+.statistics{
+    display: flex;
+    padding-top: 55px;
+}
+.statistics div{
+    margin-right: 100px;
+}
+.statistics div p{
+    margin: 0;
+}
+#home_container .statistics div .numbers{
+    color: #FFF;
+    font-family: Raleway;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+#home_container .statistics div .stat_description{
+    color: #FFF;
+    font-family: Raleway;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+}
+.btn_to_vr {
+    margin-top: 50px;
+    width: 216px;
+    height: 60px;
+    flex-shrink: 0;
+    border-radius: 15px;
+    border: 2px solid #F9F7F1;
+    position: relative;
+    overflow: hidden;
+    transition: background-color 0.3s, color 0.3s; /* Анімація для зміни фону та кольору тексту */
+    cursor: pointer;
+}
+.btn_to_vr p {
+    color: #F9F7F1;
+    text-align: center;
+    font-family: Raleway;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    margin: 0;
+    padding-top: 15px;
+    transition: color 0.3s; /* Анімація для зміни кольору тексту */
+}
+.btn_to_vr:hover {
+    background-color: #F9F7F1; /* Зміна фону при наведенні */
+}
+.btn_to_vr:hover p {
+    color: #232323; /* Зміна кольору тексту при наведенні */
+}
+
+
+/* News */
+
+ .container .nav_menu {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+ .container .nav_menu a {
+    text-decoration: none;
+    color: #000;
+    text-align: center;
+    font-family: Raleway;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 350;
+    line-height: normal;
+    margin-right: 70px;
+    transition: font-weight 0.3s, font-size 0.3s; /* Добавляем плавный переход для свойств font-weight и font-size */
+}
+ .container .nav_menu a:hover {
+    font-weight: bold; /* Сделать текст жирным при наведении */
+    font-size: 26px; /* Увеличить размер шрифта при наведении */
+}
+ .container .nav_menu a:last-child {
+    margin-right:0;
+}
+
+.faculty_dropdown {
+    position: relative;
+    text-decoration: none;
+    color: #000;
+    text-align: center;
+    font-family: Raleway;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 350;
+    line-height: normal;
+    margin-right: 70px;
+    transition: font-weight 0.3s, font-size 0.3s;
+}
+
+.faculty_dropdown:hover {
+    font-weight: bold; /* Сделать текст жирным при наведении */
+    font-size: 26px; /* Увеличить размер шрифта при наведении */
+}
+.faculty_dropdown:last-child {
+    margin-right:0;
+}
+
+#faculty_list {
+    display: none;
+    position: absolute;
+    top: calc(100% + 5px);
+    left: 0;
+    background-color: #fff;
+    border: none;
+    padding: 5px;
+}
+
+#faculty_list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    color: #000;
+    text-align: center;
+    font-family: Raleway;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 350;
+    line-height: normal;
+    margin-right: 70px;
+    transition: font-weight 0.3s, font-size 0.3s;
+}
+
+#faculty_list ul li {
+    margin: 5px 0;
+    text-transform: lowercase;
+    float: left;
+}
+
+#faculty_list ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+.faculty_dropdown:hover #faculty_list {
+    display: block;
+}
+
+
+
+
+
+
+
+.article{
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-bottom: 30px;
+}
+.article .article_name {
+    margin: 0;
+    padding-top: 70px;
+    color: #000;
+    font-family: Raleway;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 93.9%; /* 30.048px */
+}
+.article .article_start {
+    margin: 0;
+    margin-top: 10px;
+    border: none;
+    width: 60%;
+    margin-left: 0;
+    height: 2px;
+    background-color: #B7B5B2;
+    color: #B7B5B2;
+}
+
+
+
+.images_row_1 {
+    padding-top: 30px;
+    display: flex;
+    justify-content: flex-start; /* Зміна на flex-start */
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.images_row_1 img {
+    width: calc(50% - 10px); /* Динамічно розрахована ширина для ряду 1 */
+    height: auto;
+    margin-bottom: 10px;
+    padding-right: 10px;
+}
+
+.images_row_2 {
+    display: flex;
+    justify-content: flex-start; /* Зміна на flex-start */
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.images_row_2 img {
+    width: calc(25% - 5px); /* Динамічно розрахована ширина для ряду 2 */
+    height: auto;
+    margin-bottom: 10px;
+    padding-right: 10px;
+
+}
+
+.images_row_2 img:last-child {
+    margin-right: 0;
+}
+
+.article .article_description{
+    padding-top: 30px;
+    margin: 0;
+    width: 100%;
+    color: #000;
+    text-align: justify;
+    font-variant-numeric: lining-nums proportional-nums;
+    font-family: Raleway;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+}
+.article .article_description p{
+    font-family: Raleway;
+}
+.article .btn_date{
+    padding-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 30px;
+}
+.article .btn_date .article_button {
+    width: 197px;
+    height: 43px;
+    border-radius: 30px;
+    background: #1E1C1E;
+    cursor: pointer;
+    transition: box-shadow 0.5s; /* Добавляем плавный переход для свойства box-shadow */
+}
+.article .btn_date .article_button:hover {
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.35);
+}
+.article .btn_date .article_button p{
+    padding-top: 10px;
+    text-align: center;
+    margin: 0;
+    color: #FFF;
+    text-align: center;
+    font-family: Raleway;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+}
+
+.article .btn_date .article_button a {
+    text-decoration: none;
+}
+
+.article .btn_date .article_date{
+    color: #000;
+    font-variant-numeric: lining-nums proportional-nums;
+    font-family: Raleway;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 93.9%; /* 15.024px */
+    margin: 0;
+}
+
+.article .article_end {
+    margin: 0;
+    width: 100%;
+    border: none;
+    margin-left: 0;
+    height: 2px;
+    background-color: #B7B5B2;
+    color: #B7B5B2;
+}
+footer{
+    /*height: 100%;*/
+    width: 100%;
+    background: #1E1C1E;
+}
+#container_footer{
+    align-items: flex-start;
+}
+footer h2{
+    color: #FFF;
+    text-align: center;
+    font-variant-numeric: lining-nums proportional-nums;
+    font-family: Raleway;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin: 0;
+}
+
+
+/* News сторінка */
+
+.dark_slider {
+    background-color: #1E1C1E;
+    height: 500px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px; 
+}
+
+#carouselExampleCaptions {
+    width: 45%;
+}
+
+.carousel-item img {
+    width: 100%; /* Зробити ширину картинки 100% ширини батьківського контейнера */
+    height: auto; /* Автоматична висота для збереження пропорцій */
+}
+
+
+.blog_item {
+    display: flex;
+    padding-top: 20px;
+}
+
+.blog_img {
+    width: 40%;
+}
+
+.blog_img img {
+    width: 100%; /* Динамічно розрахована ширина для ряду 1 */
+    height: auto;
+}
+
+.blog_textbox {
+    border: 1px solid black; /* 1px - товщина кордону, solid - тип лінії (прямий), black - колір */
+    width: 70%;
+    padding: 20px;
+}
+
+
+.blog_title {
+    font-size: 24px;
+    padding-bottom: 15px;
+    margin: 0;
+}
+
+
+/* About сторінка */
+
+.article_description .part {
+    display: flex;
+    margin-bottom: 40px;
+    align-items: center;
+}
+
+#left_p {
+    margin-right: 30px;
+}
+
+#right_p {
+    margin-left: 30px;
+}
+
+.video_wrapper {
+    width: 45%;
+}
+
+.video_wrapper video {
+    width: 100%;
+}
+
+
+
+/* Лого + назва */
+footer .logo_name{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+footer .logo_name img{
+    width: 72.366px;
+    height: 86.26px;
+}
+footer .logo_name p{
+    margin: 0;
+    color: #FFF;
+    text-align: center;
+    text-shadow: 0px 4px 30px rgba(0, 0, 0, 0.70);
+    font-family: Beware;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+/* Про нас */
+footer .about_us{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+footer .about_us p{
+    color: #FFF;
+    text-align: center;
+    font-variant-numeric: lining-nums proportional-nums;
+    font-family: Raleway;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    margin: 0;
+    padding-top: 18px;
+}
+/* Соц мережі */
+footer .social{
+    display: flex;
+    flex-direction: column;
+    align-items: center;   
+}
+footer .social_resp{
+    display: none;   
+}
+footer .social .icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+}
+footer .social .icons img{
+    padding-right: 15px;
+}
+footer .social .icons img:last-child {
+    padding-right: 0px;
+}
+/* Контакти */
+footer .contacts{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+footer .contacts .mail{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 18px;
+}
+footer .contacts .mail p{
+    color: #FFF;
+    font-family: Raleway;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    padding-left: 15px;
+    margin: 0;
+}
+footer .contacts .phone{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 18px;
+}
+footer .contacts .phone p{
+    color: #FFF;
+    font-variant-numeric: lining-nums proportional-nums;
+    font-family: Raleway;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    padding-left: 15px;
+    margin: 0;
+}
+#FAQ{
+    padding-top: 0;
+}
+#FAQ p{
+    color: #F9F7F1;
+    font-family: Montserrat;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    margin-bottom: 5px;
+}
+/* map.php */
+.dark {
+    position: absolute;
+    width: 100%;
+    height: 121px;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+.dark img {
+    float: right;
+    padding-top: 45px;
+    padding-right: 40px;
+    cursor: pointer;
+}
+iframe {
+    padding-top: 20px;
+}
+/* Колекції */
+.collect {
+    margin-top: 20px;
+    background-color: #FFF;
+}
+.collect h1 {
+    font-family: Raleway;
+    font-size: 32px;
+    text-align: center;
+    padding-top: 50px;
+    margin: 0;
+    font-weight: normal;
+}
+.exposure {
+    display: flex;
+    padding-top: 20px;
+}
+.exposure .name p {
+    font-family: Raleway;
+    font-size: 24px;
+    font-weight: bold;
+    padding-right: 80px;
+    margin: 0;
+}
+.exposure .menu_exp {
+    display: flex;
+    flex-wrap: wrap;
+}
+.exposure .menu_exp p {
+    font-family: Raleway;
+    font-size: 24px;
+    font-weight: normal;
+    padding-right: 80px;
+    padding-bottom: 20px;
+    margin: 0;
+    position: relative;
+    text-decoration: none;
+    color: black;
+    transition: color 0.3s; /* Плавный переход цвета текста */
+    cursor: pointer;
+}
+.exposure .menu_exp p::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 15px;
+    height: 2px; /* Толщина подчеркивания */
+    width: calc(100% - 80px); /* Ширина подчеркивания с учетом padding-right */
+    background-color: transparent;
+    transform: scaleX(0); /* Начальная ширина подчеркивания 0 */
+    transform-origin: bottom left; /* Точка изменения ширины - левый нижний угол */
+    transition: transform 0.3s ease, background-color 0.3s; /* Плавный переход для изменения ширины и цвета */
+}
+.exposure .menu_exp p:hover::after {
+    transform: scaleX(1); /* Увеличиваем ширину подчеркивания до 1 при наведении */
+    background-color: #080707; /* Изменяем цвет подчеркивания при наведении */
+}
+.block_content {
+    width: 100%;
+}
+.colections_name {
+    font-family: Raleway;
+    font-size: 24px;
+    font-weight: normal;
+    margin: 0;
+    padding-bottom: 30px;
+}
+.block_content .content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.block_content .content .cards {
+    width: 170px;
+    height: 240px;
+    text-align: center;
+    margin-bottom: 80px;
+    margin-right: 40px;
+    transition: transform 0.3s; /* Добавляем анимацию для свойства transform */
+    /* display: flex; */
+}
+
+.block_content .content a{
+    text-decoration: none;
+    color: #000;
+}
+
+.block_content .content .cards:hover {
+    transform: scale(1.1); /* Увеличиваем размер картки при наведении */
+}
+.block_content .content .cards img {
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Зберігає пропорції і обрізає зайвий контент */
+}
+.block_content .content .cards p {
+    font-family: Raleway;
+    font-size: 15px;
+    font-weight: normal;
+    padding-left: 10px;
+    padding-right: 10px;
+    cursor: pointer;
+}
+
+
+.Dmodel {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    min-height: 300px;
+}
+
+.Dmodel .model {
+    display: block;
+    width: 500px;
+    height: 500px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.text_model {
+    padding-bottom: 30px;
+    font-size: 18px;
+}
+
+.this_collection h1{
+    font-size: 24px;
+    padding-bottom: 15px;
+}
+
+.this_collection .content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+.this_collection .content .cards {
+    width: 170px;
+    height: 240px;
+    text-align: center;
+    margin-bottom: 80px;
+    margin-right: 40px;
+    transition: transform 0.3s; /* Добавляем анимацию для свойства transform */
+    /* display: flex; */
+}
+
+.this_collection .content a{
+    text-decoration: none;
+    color: #000;
+}
+
+.this_collection .content .cards:hover {
+    transform: scale(1.1); /* Увеличиваем размер картки при наведении */
+}
+.this_collection .content .cards img {
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Зберігає пропорції і обрізає зайвий контент */
+}
+.this_collection .content .cards p {
+    font-family: Raleway;
+    font-size: 15px;
+    font-weight: normal;
+    padding-left: 10px;
+    padding-right: 10px;
+    cursor: pointer;
+}
+
+
+/* layout */
+
+.main {
+    margin-top: 20px;
+    background-color: #FFF;
+}
+
+
+

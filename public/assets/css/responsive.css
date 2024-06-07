@@ -1,0 +1,392 @@
+@media screen and (max-width: 1200px) {
+    header .container {
+        padding-left: 60px;
+        padding-right: 60px;
+    }
+    .home_content #home_container {
+        padding-left: 60px;
+        padding-right: 60px; 
+    }
+    .news .container {
+        padding-left: 60px;
+        padding-right: 60px;
+    }
+    .article {
+        padding-left: 60px;
+        padding-right: 60px;
+    }
+    
+    footer .container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .exposure {
+        padding-top: 30px;
+    }
+    .collect .container {
+        padding-left: 60px;
+        padding-right: 60px;
+    }
+
+    .search {
+        display: none;
+    }
+
+    .article_description .part {
+        flex-direction: column;
+    }
+
+    .article_description .part:last-child {
+        flex-direction: column-reverse;
+    }
+    
+}
+@media screen and (max-width: 900px) {
+    
+    .links {
+        display: none;
+    }
+    .home_content #home_container {
+        padding-top: 100px; 
+    }
+    .news .container .nav_menu a{
+        margin-right: 60px;
+    }
+    .news .article .article_name {
+        font-size: 28px;
+        padding-top: 60px
+    }
+    .article .btn_date {
+        align-items: flex-start;
+    }
+    footer .logo_name p {
+        width: 100px;
+    }
+    footer .about_us {
+        display: none;
+    }
+    footer .social .icons {
+        display: flex;
+        padding-top: 20px;
+        flex-direction: column;
+    }
+    footer .social .icons img {
+        padding-right: 0;
+        padding-bottom: 10px;
+    }
+    .collect h1 {
+        font-size: 26px;
+    }
+    .exposure {
+        display: block;
+    }
+    .exposure .menu_exp {
+        padding-top: 20px;
+    }
+    .exposure .menu_exp p {
+        padding-right: 35px;
+    }
+    .exposure .menu_exp p::after {
+        width: calc(100% - 35px); /* Ширина подчеркивания с учетом padding-right */
+    }
+    .block_content .content {
+        justify-content: center;
+    }
+
+    .article .btn_date {
+        align-items: baseline;
+    }
+
+    .article .article_description img {
+        width: 100%;
+        height: auto;
+    }
+
+    #carouselExampleCaptions {
+        width: 70%;
+    }
+
+    .blog_item {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .blog_img {
+        width: 100%;
+    }
+
+    .blog_textbox {
+        width: 100%;
+    }
+}
+@media screen and (max-width: 600px) {
+   header .container {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    header .container .search {
+        width: 200px;
+    }
+    .home_content #home_container {
+        padding-left: 30px;
+        padding-right: 30px; 
+    }
+    .news .container {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    .article {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    
+    footer .container {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    .home_content #home_container {
+        padding-top: 80px;
+    }
+    #home_container h1 {
+        font-size: 46px;
+    }
+    .home_content #home_container .statistics {
+        padding-top: 45px;
+    }
+    #home_container .statistics div .numbers{
+        font-size: 32px;
+    }
+    .news .container .nav_menu a {
+        margin-right: 35px;
+        font-size: 20px;
+    }
+    .news .article .article_name {
+        padding-top: 40px;
+    }
+    .images_row_1 img {
+        width: 100%;
+        height: auto;
+        padding-bottom: 10px;
+    }
+    .images_row_1 img:last-child {
+        padding-bottom: 0px;
+    }
+    .images_row_2{
+        padding-top: 10px;
+    }
+    .images_row_2 img {
+        width: 49%;
+        height: auto;
+        padding-bottom: 10px;
+    }
+    .article .article_description{
+        padding-top: 10px;
+    }
+    footer .logo_name img{
+        width: 40px;
+        height: 40px;
+    }
+    footer .logo_name p {
+        font-size: 14px;
+        width: auto;
+    }
+    footer .social{
+        display: none;
+    }
+    footer .social_resp{
+        padding-top: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    footer .social_resp img{
+        margin-right: 20px;
+    }
+
+    footer .social_resp img:last-child{
+        margin-right: 0px;
+    }
+    footer .social_resp img:last-child{
+        padding-right: 0px;
+    }
+    footer .contacts .mail {
+        padding-top: 30px;
+    }
+    .block_content .content .card {
+        padding-right: 0;
+    }
+    .collect .container {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}
+@media screen and (max-width: 480px) {
+    
+    header .container .search {
+        display: none;
+    }
+    .home_content #home_container {
+        padding-top: 100px;
+    }
+    #home_container h1 {
+        font-size: 36px;
+    }
+    #home_container .description {
+        font-size: 18px;
+    }
+    .statistics div {
+        margin-right: 60px;
+    }
+    .statistics div:last-child {
+        margin-right: 0px;
+    }
+    #home_container .statistics div .numbers {
+        font-size: 24px;
+    }
+    .btn_to_vr {
+        width: 165px;
+        height: 80px;
+    }
+    .news .container .nav_menu {
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .news .container .nav_menu a {
+        margin: 0;
+        padding-bottom: 10px;
+    }
+    .news .article .article_name {
+        padding-top: 20px;
+        font-size: 24px;
+    }
+    .article .article_description {
+        font-size: 16px;
+    }
+    .article .btn_date .article_button {
+        width: 145px;
+    }
+    .article .btn_date .article_button p {
+        font-size: 16px;
+    }
+    .article .btn_date .article_date {
+        font-size: 14px;
+    }
+    footer .social_resp img {
+        padding-right: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    footer .contacts {
+        padding-top: 0px;
+        padding-left: 30px;
+    }
+    footer .contacts .mail {
+        padding-top: 80px;
+    }
+    footer .contacts .phone {
+        padding-top: 22px;
+    }
+    footer .contacts .mail p {
+        font-size: 12px;
+    }
+    footer .contacts .phone p {
+        font-size: 12px;
+    }
+    #FAQ {
+        margin-bottom: 0;
+        display: flex;
+        align-items: flex-end;
+        padding-bottom: 20px;
+    }
+    #FAQ p {
+        font-size: 10px;
+    }
+    .collect h1 {
+        font-size: 24px;
+    }
+    .exposure .name p {
+        font-size: 20px;
+    }
+    .exposure .menu_exp p {
+        font-size: 20px;
+        padding-right: 20px;
+    }
+    .exposure .menu_exp p::after {
+        width: calc(100% - 20px); /* Ширина подчеркивания с учетом padding-right */
+    }
+    .colections_name {
+        font-size: 20px;
+    }
+    .block_content .content .card img {
+        width: 100%;
+        height: auto;
+    }
+}
+@media screen and (max-width: 320px) {
+    .home_view .container img {
+        width: 50px;
+    }
+    .home_view .container .burger_menu {
+        width: 35px;
+    }
+    .home_content #home_container {
+        padding-top: 80px;
+    }
+    #home_container h1 {
+        font-size: 24px;
+    }
+    .home_content #home_container .statistics {
+        flex-direction: column;
+    }
+    .btn_to_vr {
+        margin-top: 35px;
+        height: 50px
+    }
+    .btn_to_vr p {
+        font-size: 18px;
+    }
+    .images_row_2 img {
+       width: 100%; 
+    }
+    .article .btn_date {
+        flex-direction: column;
+        align-items: center;
+    }
+    footer .container {
+        display: flex;
+        flex-direction: column;
+    }
+    footer .logo_name {
+        width: 100%;
+    }
+    footer .logo_name img {
+        width: 50px;
+    }
+    footer .logo_name p{
+        font-size: 16px;
+    }
+    footer .icons_resp {
+        display: flex;
+    }
+    footer .social_resp img {
+        padding-right: 20px;
+    }
+    footer .contacts {
+        padding: 0;
+        padding-top: 20px;
+    }
+    footer .contacts .mail {
+        padding-top: 20px;
+    }
+    #FAQ {
+        padding-top: 20px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .article .btn_date .article_button {
+        margin-bottom: 15px;
+    }
+}
